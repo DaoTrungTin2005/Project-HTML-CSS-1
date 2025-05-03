@@ -8,7 +8,7 @@
 
 html {
   font-size: 62.5%;
-  /* --primary-color: #683c4972 */
+  --primary-color: #683c4972
 }
 
 /* khôi phục lại cỡ chữ mặc đinh */
@@ -20,6 +20,14 @@ body {
 /* common */
 a {
   text-decoration: none;
+}
+
+.heading-lv2 {
+  /* font-family: var(--font-heading); */
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 1.27px;
+  letter-spacing: -2%;
 }
 
 .btn {
@@ -44,6 +52,7 @@ a {
 .btn:hover {
   /* opacity: 0.9; */
   color: #5d683c68;
+  cursor: pointer;
 }
 
 .main-content {
@@ -211,7 +220,7 @@ a {
 .hero .heading {
   /* font-family: var(--font-heading); */
   font-weight: 700;
-  font-size: 5.0rem;
+  font-size: 5rem;
   line-height: 1.17;
   letter-spacing: -2%;
 }
@@ -255,32 +264,162 @@ a {
   align-items: center;
 }
 
-.hero .watch-video span{
+.hero .watch-video span {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  margin-left: 14px;
+}
 
-font-weight: 600;
-font-size: 1.8rem;
-line-height: 1.67;
-margin-left: 14px;
+.hero .desc-recent {
+  margin-top: 48px;
+}
+
+.hero .stats strong {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 1.23;
+  margin-right: 15px;
+}
+
+.hero .stats strong:nth-child(2) {
+  margin-left: 28px;
+}
+
+.hero .stats {
+  margin-top: 8px;
+}
+
+/* popular */
+.popular {
+  padding: 65px;
+  background-color:white;
+  /* kc là 200 mà dùng pad là 65 rồi thì trừ ra */
+  margin-top: 135px;
+}
+
+.popular-top .desc {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  /* letter-spacing: 0%; */
+  width: 458px;
+}
+
+.popular-top {
+  display: flex;
+  /* dãn ra 2 phía */
+  justify-content: space-between;
+  /*  cho bên trái và bên phải giữa */
+  align-items: center;
+}
+
+.popular-top .control-btn {
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popular-top .control {
+  display: flex;
+  /* khoảng cách giữa 2 nút */
+  gap: 18px;
+}
+
+.popular-top .control-btn:hover {
+  background: #000;
+  color: white;
+  cursor: pointer;
+}
+
+.popular .course-list {
+  margin-top: 55px;
+  display: flex;
+  background: white;
+  /*  cách mấy cái hình ra */
+  gap: 30px;
+}
+
+.popular .course-item .thumb {
+  /*  cho 3 cái ảnh nằm vô chung cái khung */
+  width: 100%;
+
+  height: 278px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.popular .course-item {
+  border-radius: 12px;
+  border: 1px solid var(--primary-color)
+
+  
+}
+.popular .course-item:hover{
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.1 );
+    border: 1px solid transparent;
+}
+
+
+.popular .course-item .info {
+  padding: 16px 22px 22px;
+}
+
+.popular .course-item .foot,
+.popular .course-item .rating,
+.popular .course-item .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popular .course-item .title a {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: black;
+}
+
+.popular.rating .value {
+  margin-left: 6px;
+
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.popular .course-item .desc {
+  margin-top: 6px;
+
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.popular .course-item .foot {
+  margin-top: 12px;
+}
+
+.popular .course-item .price {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
 
 }
 
-.hero .desc-recent{
-    margin-top: 48px;
+.popular .course-item .btn-book{
+    border: none;
 }
 
-.hero .stats strong{
-    font-family: var(--font-heading);
-font-weight: 700;
-font-size: 4.4rem;
-line-height: 1.23;
-margin-right: 15px;
-
-}
-
-.hero .stats strong:nth-child(2){
-    margin-left: 28px;
-}
-
-.hero .stats{
-    margin-top: 8px;
+.popular .course-item .btn-book:hover{
+    background: var(--primary-color);
+    color: #000;
 }
