@@ -9,4 +9,128 @@ html{
 /* khôi phục lại cỡ chữ mặc đinh */
 body{
     font-size: 1.6rem;
+    font-family: "Sen", sans-serif;
+
+}
+
+/* common */
+a{
+    text-decoration: none;
+}
+
+.btn{
+    /* font-family: Poppins; */
+font-weight: 600;
+font-size: 1.6rem;
+/* dat ch cao */
+line-height: 50px;
+/* xd ch rong toi thieu */
+min-width: 118px;
+/* line-height: 28px; */
+/* letter-spacing: 0%; */
+text-align: center;
+color: #FFFFFF;
+background-color: #171100;
+/* width: 144; */
+/* height: 50; */
+/* top: 36px; */
+/* left: 1161px; */
+border-radius: 24.5px;
+
+/* thêm khoảng đệm có tác dụng trong trường hợp text nó dài ra, thuộc tính inline ko xài dc padding */
+display: inline-block;
+padding: 0 16px;
+
+}
+
+.main-content{
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* header */
+.header{
+    background: #cc9a12;
+
+}
+
+.header.fixed{
+    position: sticky;
+    /* padding 36px , muốn cách 8px thì 36-8 */
+    top: -28px;
+}
+
+.header .bodyheader{
+    display : flex;
+    align-items: center;
+    padding: 36px 0 8px;
+    
+    
+
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav{
+    margin-left: auto;
+}
+
+.nav a{
+    position: relative;
+    /* font-weight: 400; */
+    /* font-size: 16px; */
+    font-size: 1.6rem;
+    /* line-height: 28px; */
+    /* letter-spacing: 0%; */
+    /* text-align: center; */
+    Color: #5F5B53;
+    padding: 8px 21px;
+    
+
+}
+
+.nav li.active a,
+.nav a:hover{
+    color: #171100;
+    /* font-family: Poppins; */
+/* font-weight: 600; */
+text-shadow: 1px 0 0 currentColor;
+/* font-size: 16px; */
+/* line-height: 28px; */
+/* letter-spacing: 0%; */
+/* text-align: center; */
+
+}
+
+
+.nav li.active a::after{
+ position: absolute;
+ left: 21px;
+ bottom: 6px;
+display: block;
+content: "";
+
+width: 12px;
+height: 2px;
+/* top: 73px; */
+/* left: 733px; */
+border-radius: 1px;
+background-color: #171100;
+
+}
+
+.header .btn-sign-up{
+    min-width: 144px;
+    /* margin-left: 49px; */
+}
+
+.header .action{
+    margin-left: 49px;
+
 }
