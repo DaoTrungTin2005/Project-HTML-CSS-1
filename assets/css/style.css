@@ -1,136 +1,286 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;
+:root {
+  --font-heading: "Sen", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  /* --primary-color: #683c4972 */
 }
 
 /* khôi phục lại cỡ chữ mặc đinh */
-body{
-    font-size: 1.6rem;
-    font-family: "Sen", sans-serif;
-
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* common */
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.btn{
-    /* font-family: Poppins; */
-font-weight: 600;
-font-size: 1.6rem;
-/* dat ch cao */
-line-height: 50px;
-/* xd ch rong toi thieu */
-min-width: 118px;
-/* line-height: 28px; */
-/* letter-spacing: 0%; */
-text-align: center;
-color: #FFFFFF;
-background-color: #171100;
-/* width: 144; */
-/* height: 50; */
-/* top: 36px; */
-/* left: 1161px; */
-border-radius: 24.5px;
+.btn {
+  font-weight: 600;
+  font-size: 1.6rem;
+  /* dat ch cao */
+  line-height: 50px;
+  /* xd ch rong toi thieu */
+  min-width: 118px;
 
-/* thêm khoảng đệm có tác dụng trong trường hợp text nó dài ra, thuộc tính inline ko xài dc padding */
-display: inline-block;
-padding: 0 16px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #171100;
 
+  border-radius: 999px;
+
+  /* thêm khoảng đệm có tác dụng trong trường hợp text nó dài ra, thuộc tính inline ko xài dc padding */
+  display: inline-block;
+  padding: 0 16px;
 }
 
-.main-content{
-    width: 1170px;
-    max-width: calc(100% - 48px);
-    margin-left: auto;
-    margin-right: auto;
+.btn:hover {
+  /* opacity: 0.9; */
+  color: #5d683c68;
 }
 
-
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* header */
-.header{
-    background: #cc9a12;
-
+.header {
+  background: #ffffff;
 }
 
-.header.fixed{
-    position: sticky;
-    /* padding 36px , muốn cách 8px thì 36-8 */
-    top: -28px;
+.header.fixed {
+  position: sticky;
+  /* padding 36px , muốn cách 8px thì 36-8 */
+  top: -28px;
+  z-index: 1;
 }
 
-.header .bodyheader{
-    display : flex;
-    align-items: center;
-    padding: 36px 0 8px;
-    
-    
-
+.header .bodyheader {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
 }
 
 .nav ul {
-    display: flex;
+  display: flex;
 }
 
-.nav{
-    margin-left: auto;
+.nav {
+  margin-left: auto;
 }
 
-.nav a{
-    position: relative;
-    /* font-weight: 400; */
-    /* font-size: 16px; */
-    font-size: 1.6rem;
-    /* line-height: 28px; */
-    /* letter-spacing: 0%; */
-    /* text-align: center; */
-    Color: #5F5B53;
-    padding: 8px 21px;
-    
+.nav a {
+  position: relative;
 
+  font-size: 1.6rem;
+
+  color: #5f5b53;
+  padding: 8px 21px;
 }
 
 .nav li.active a,
-.nav a:hover{
-    color: #171100;
-    /* font-family: Poppins; */
-/* font-weight: 600; */
-text-shadow: 1px 0 0 currentColor;
-/* font-size: 16px; */
-/* line-height: 28px; */
-/* letter-spacing: 0%; */
-/* text-align: center; */
+.nav a:hover {
+  color: #171100;
+
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.nav li.active a::after {
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  display: block;
+  content: "";
+
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #171100;
+}
+
+.header .btn-sign-up {
+  min-width: 144px;
+}
+
+.header .action {
+  margin-left: 49px;
+}
+
+/* hero */
+.hero {
+  /* dùng padding ko dung margin vì nó sẽ đổ dc nền */
+  padding: 56px 0 65px;
+  background-color: #683c4972;
+}
+
+.hero .body {
+  display: flex;
+}
+
+.hero .media-block {
+  position: relative;
+  /* 570/1170 */
+  width: 48%;
+}
+
+/* trái */
+
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero .hero-sumary {
+  padding: 18px 28px;
+  position: absolute;
+  bottom: 50px;
+  right: -40px;
+  width: 270;
+
+  border-radius: 12px;
+  box-shadow: 0px 16px 32px 0px #0000000d;
+  background: #ffffff;
+}
+
+.hero-sumary .item {
+  display: flex;
+  align-items: center;
+}
+
+.hero-sumary .icon {
+  width: 48px;
+  height: 48px;
+  top: 571px;
+  left: 459px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcefff;
+}
+
+.hero-sumary .icon2 {
+  background-color: #ebeaff;
+}
+
+.hero-sumary .icon3 {
+  background-color: #fff9e8;
+}
+
+.hero-sumary .info {
+  margin-left: 16px;
+}
+
+.hero-sumary .label {
+  font-weight: 400;
+  font-size: 1.4rem;
+  /* 26px / 14px = 1.857 */
+  /* line-height: 26px; */
+  line-height: 1.86;
+}
+
+.hero-sumary .title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+
+.hero-sumary .item + .item {
+  margin-top: 22px;
+}
+
+/* phải */
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 43px;
+}
+
+.hero .heading {
+  /* font-family: var(--font-heading); */
+  font-weight: 700;
+  font-size: 5.0rem;
+  line-height: 1.17;
+  letter-spacing: -2%;
+}
+
+.hero .desc {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  margin-top: 22px;
+}
+
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-cta {
+  min-width: 180px;
+  /* background-color: var(--primary-color); */
+  line-height: 64px;
+}
+
+.hero .watch-video {
+  border: none;
+  background: transparent;
+  display: flex;
+  margin-left: 28px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hero .watch-video .icon {
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 8px 16px 0px #00000012;
+  background: #ffffff;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .watch-video span{
+
+font-weight: 600;
+font-size: 1.8rem;
+line-height: 1.67;
+margin-left: 14px;
 
 }
 
+.hero .desc-recent{
+    margin-top: 48px;
+}
 
-.nav li.active a::after{
- position: absolute;
- left: 21px;
- bottom: 6px;
-display: block;
-content: "";
-
-width: 12px;
-height: 2px;
-/* top: 73px; */
-/* left: 733px; */
-border-radius: 1px;
-background-color: #171100;
+.hero .stats strong{
+    font-family: var(--font-heading);
+font-weight: 700;
+font-size: 4.4rem;
+line-height: 1.23;
+margin-right: 15px;
 
 }
 
-.header .btn-sign-up{
-    min-width: 144px;
-    /* margin-left: 49px; */
+.hero .stats strong:nth-child(2){
+    margin-left: 28px;
 }
 
-.header .action{
-    margin-left: 49px;
-
+.hero .stats{
+    margin-top: 8px;
 }
