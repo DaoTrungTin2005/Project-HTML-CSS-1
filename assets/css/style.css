@@ -8,7 +8,7 @@
 
 html {
   font-size: 62.5%;
-  --primary-color: #683c4972
+  --primary-color: #683c4972;
 }
 
 /* khôi phục lại cỡ chữ mặc đinh */
@@ -60,6 +60,27 @@ a {
   max-width: calc(100% - 48px);
   margin-left: auto;
   margin-right: auto;
+}
+
+/* hiện dấu 3 chấm ở chỉ cho hiện 1 dòng */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* hiện dấu 3 chấm ở tiêu đề chỉ cho hiện 2 dòng */
+.line-clamp.line-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 2);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* đôi lúc ng ta nhập mấy cái chữ viết liền hoặc là đg link làm nó ko xún dòng dc nên bị vỡ giao diện */
+.break-all {
+  word-break: break-all;
 }
 
 /* header */
@@ -294,7 +315,7 @@ a {
 /* popular */
 .popular {
   padding: 65px;
-  background-color:white;
+  background-color: white;
   /* kc là 200 mà dùng pad là 65 rồi thì trừ ra */
   margin-top: 135px;
 }
@@ -358,16 +379,15 @@ a {
 }
 
 .popular .course-item {
+  /* cho trọng số 3 cái như nhau nên 3 cột bằng nhau */
+  flex: 1;
   border-radius: 12px;
-  border: 1px solid var(--primary-color)
-
-  
+  border: 1px solid var(--primary-color);
 }
-.popular .course-item:hover{
-    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.1 );
-    border: 1px solid transparent;
+.popular .course-item:hover {
+  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
 }
-
 
 .popular .course-item .info {
   padding: 16px 22px 22px;
@@ -412,14 +432,87 @@ a {
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.67;
-
 }
 
-.popular .course-item .btn-book{
-    border: none;
+.popular .course-item .btn-book {
+  border: none;
 }
 
-.popular .course-item .btn-book:hover{
-    background: var(--primary-color);
-    color: #000;
+.popular .course-item .btn-book:hover {
+  background: var(--primary-color);
+  color: #000;
+}
+
+/* feedback */
+/* nhớ để cái padding lúc trc 65 rooif nha mêm 200 -65 */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0;
+  background-color : black;
+}
+
+.feedback-item {
+  display: flex;
+}
+
+.feedback-item .avarta {
+  width: 72px;
+  height: 72px;
+  /* hình tròn */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback-item .info .member-name {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.42;
+  margin-top: 18px;
+  color: white;
+}
+
+.feedback-item .info .desc {
+  margin-top: 4px;
+
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: white;
+}
+
+.feedback-item .dots{
+    gap: 6px;
+    display: flex;
+    margin-top: 28px;
+}
+
+.feedback-item .dot{
+    display: flex;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.feedback-item .dot.active{
+    background: #634700;
+    /* thằng nào mà active rồi thì bỏ hình bàn tay */
+    cursor: default;
+}
+
+.feedback-item .content{
+    width: 66%;
+    margin-left: auto;
+}
+
+.feedback-item blockquote{
+
+font-weight: 400;
+font-style: italic;
+font-size: 2.6rem;
+line-height:1.54;
+color: white;
+
+
 }
