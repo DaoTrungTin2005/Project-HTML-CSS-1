@@ -457,7 +457,7 @@ a {
   flex-shrink: 0;
   /* đảm bảo chiếm hết chiều rộng khi xún dòng  */
   width: 100%;
-  /* transform: translateX(-200%); */
+  transform: translateX(-200%);
 
 }
 
