@@ -26,7 +26,7 @@ a {
   /* font-family: var(--font-heading); */
   font-weight: 700;
   font-size: 3.8rem;
-  line-height: 1.27px;
+  line-height: 1.27;
   letter-spacing: -2%;
 }
 
@@ -537,3 +537,62 @@ word-break: break-word;
     /* object-position: 100% -200%; Thử lại với selector cụ thể hơn */
     object-position: 1% 100%;
   }
+
+  /* feature */
+  .feature{
+    margin-top: 135px;
+    padding: 65px 0;
+    background: white;
+  }
+
+  .feature .body{
+    display: flex;
+    justify-content: space-between;
+    /* border: 5px  black ; */
+    /* background: var(--primary-color); */
+    
+  }
+
+  .feature .images{
+    display: flex;
+    gap: 30px;
+  }
+
+  .feature .images img{
+    width: 270px;
+    height: 405px;
+    object-fit: cover;
+    border-radius: 16px;
+
+  }
+
+  .feature .images .ronaldo{
+    object-position: 0px -17px;
+  }
+
+  .feature .images .messi{
+    object-position: 0px 0px;
+    margin-top: 34px;
+  }
+
+  .feature .content{
+    /* main content là 1170. lấy 470/11170 */
+    width: 41%;
+    /* này căn giữa cho nguyên khối content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.feature .desc{
+    margin-top: 16px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.feature .cta-btn{
+    width: 137px;
+    height: 50px;
+    background: #000;
+    margin-top: 32px;
+}
