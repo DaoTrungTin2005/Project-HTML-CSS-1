@@ -453,6 +453,12 @@ a {
 
 .feedback-item {
   display: flex;
+  /* cho ko bị co lai */
+  flex-shrink: 0;
+  /* đảm bảo chiếm hết chiều rộng khi xún dòng  */
+  width: 100%;
+  /* transform: translateX(-200%); */
+
 }
 
 .feedback-item .avarta {
@@ -504,6 +510,8 @@ a {
 .feedback-item .content{
     width: 66%;
     margin-left: auto;
+
+
 }
 
 .feedback-item blockquote{
@@ -513,6 +521,19 @@ font-style: italic;
 font-size: 2.6rem;
 line-height:1.54;
 color: white;
+word-break: break-word;
 
 
 }
+
+.feedback-list{
+    display: flex;
+    overflow: hidden;
+    /* flex-wrap: wrap; */
+    
+}
+
+.feedback-item .info .avarta.Dat {
+    /* object-position: 100% -200%; Thử lại với selector cụ thể hơn */
+    object-position: 1% 100%;
+  }
