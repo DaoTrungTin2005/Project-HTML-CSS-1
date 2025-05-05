@@ -448,7 +448,7 @@ a {
 .feedback {
   margin-top: 135px;
   padding: 96px 0;
-  background-color : black;
+  background-color: black;
 }
 
 .feedback-item {
@@ -457,8 +457,7 @@ a {
   flex-shrink: 0;
   /* đảm bảo chiếm hết chiều rộng khi xún dòng  */
   width: 100%;
-  /* transform: translateX(-200%); */
-
+  transform: translateX(-200%);
 }
 
 .feedback-item .avarta {
@@ -486,113 +485,343 @@ a {
   color: white;
 }
 
-.feedback-item .dots{
-    gap: 6px;
-    display: flex;
-    margin-top: 28px;
+.feedback-item .dots {
+  gap: 6px;
+  display: flex;
+  margin-top: 28px;
 }
 
-.feedback-item .dot{
-    display: flex;
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
-    background: white;
-    cursor: pointer;
+.feedback-item .dot {
+  display: flex;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
 }
 
-.feedback-item .dot.active{
-    background: #634700;
-    /* thằng nào mà active rồi thì bỏ hình bàn tay */
-    cursor: default;
+.feedback-item .dot.active {
+  background: #634700;
+  /* thằng nào mà active rồi thì bỏ hình bàn tay */
+  cursor: default;
 }
 
-.feedback-item .content{
-    width: 66%;
-    margin-left: auto;
-
-
+.feedback-item .content {
+  width: 66%;
+  margin-left: auto;
 }
 
-.feedback-item blockquote{
-
-font-weight: 400;
-font-style: italic;
-font-size: 2.6rem;
-line-height:1.54;
-color: white;
-word-break: break-word;
-
-
+.feedback-item blockquote {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2.6rem;
+  line-height: 1.54;
+  color: white;
+  word-break: break-word;
 }
 
-.feedback-list{
-    display: flex;
-    overflow: hidden;
-    /* flex-wrap: wrap; */
-    
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+  /* flex-wrap: wrap; */
 }
 
 .feedback-item .info .avarta.Dat {
-    /* object-position: 100% -200%; Thử lại với selector cụ thể hơn */
-    object-position: 1% 100%;
-  }
-
-  /* feature */
-  .feature{
-    margin-top: 135px;
-    padding: 65px 0;
-    background: white;
-  }
-
-  .feature .body{
-    display: flex;
-    justify-content: space-between;
-    /* border: 5px  black ; */
-    /* background: var(--primary-color); */
-    
-  }
-
-  .feature .images{
-    display: flex;
-    gap: 30px;
-  }
-
-  .feature .images img{
-    width: 270px;
-    height: 405px;
-    object-fit: cover;
-    border-radius: 16px;
-
-  }
-
-  .feature .images .ronaldo{
-    object-position: 0px -17px;
-  }
-
-  .feature .images .messi{
-    object-position: 0px 0px;
-    margin-top: 34px;
-  }
-
-  .feature .content{
-    /* main content là 1170. lấy 470/11170 */
-    width: 41%;
-    /* này căn giữa cho nguyên khối content */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-.feature .desc{
-    margin-top: 16px;
-    font-size: 1.6rem;
-    line-height: 1.75;
+  /* object-position: 100% -200%; Thử lại với selector cụ thể hơn */
+  object-position: 1% 100%;
 }
 
-.feature .cta-btn{
-    width: 137px;
-    height: 50px;
-    background: #000;
-    margin-top: 32px;
+/* feature 1*/
+.feature {
+  margin-top: 135px;
+  padding: 65px 0;
+  background: white;
+}
+
+.feature .body {
+  display: flex;
+  justify-content: space-between;
+  /* border: 5px  black ; */
+  /* background: var(--primary-color); */
+}
+
+.feature .images {
+  display: flex;
+  gap: 30px;
+}
+
+.feature .images img {
+  width: 270px;
+  height: 405px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.feature .images .ronaldo {
+  object-position: 0px -17px;
+}
+
+.feature .images .messi {
+  object-position: 0px 0px;
+  margin-top: 34px;
+}
+
+.feature .content {
+  /* main content là 1170. lấy 470/11170 */
+  width: 41%;
+  /* này căn giữa cho nguyên khối content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature .desc {
+  margin-top: 16px;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.feature .cta-btn {
+  width: 137px;
+  height: 50px;
+  background: #000;
+  margin-top: 32px;
+}
+
+/* feature 2*/
+
+.feature-2nd {
+  /* 2 cái padding là 65, 200 - 65 -65 */
+  margin-top: 70px;
+}
+
+.feature-2nd .body {
+  /* đổi chiều cho 2 cái ảnh đổi qua */
+  flex-direction: row-reverse;
+}
+
+/* 570/1170 */
+.feature-2nd .content {
+  width: 49%;
+}
+
+.feature-2nd .images img {
+  width: 470px;
+  height: 470px;
+  object-fit: cover;
+  object-position: -7px -227px;
+}
+
+.feature-2nd .brasil {
+  align-items: flex-start;
+  text-align: end;
+}
+
+.feature-2nd .content .btn-brasil {
+  margin-left: 440px;
+}
+
+/* blog */
+.blogs {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: rgb(0, 0, 0);
+}
+
+.blogs .blog-top {
+  text-align: center;
+}
+
+.blogs .blog-top .desc {
+  font-size: 1.6rem;
+  /* font-weight: 400; */
+  line-height: 1.75;
+  width: 448px;
+  margin: 16px auto 0;
+}
+
+.blogs .blog-list {
+  gap: 30px;
+  display: flex;
+  margin-top: 55px;
+  overflow: hidden;
+}
+
+.blogs .item {
+  /* 2 khoảng gap (mỗi khoảng 30) (60/3=20) -> mỗi item bị hụt đi 20px*/
+  /* nhỏ hơn 20px so với 33.33% của phần tử cha. */
+  width: calc(33.33% - 20px);
+  border-radius: 16px;
+  background: white;
+  flex-shrink: 0;
+}
+
+.blogs .item .thumb {
+  width: 100%;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.blogs .item .info {
+  padding: 20px 20px 28px;
+}
+
+.blogs .item .date {
+  position: relative;
+  /* để thẻ cha cái ngang chứa vừa nd của nó */
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+  padding-bottom: 12px;
+}
+
+.blogs .item .date::before {
+  content: "";
+  /* để set đc độ rộng */
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: black;
+  margin-right: 4px;
+}
+
+.blogs .item .date::after {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  /* width: 160px; */
+  /* muốn luôn lệch sang phải 27px */
+  right: -27px;
+  height: 1px;
+  border-radius: 0.5px;
+  background: #000;
+}
+
+.blogs .item .title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+  margin-top: 12px;
+}
+
+.blogs .item .btn {
+  margin-top: 12px;
+  font-size: 1.4rem;
+}
+
+.blogs .item .btn:hover {
+  background: var(--primary-color);
+  color: #000;
+}
+
+.blogs .item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blogs .dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.blogs .dot {
+  height: 6px;
+  width: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.blogs .dot.active {
+  background: #634700;
+  cursor: default;
+}
+
+.blogs .blog-top {
+  color: white;
+}
+
+/* footer */
+footer {
+  background: black;
+  padding: 96px 135px 0;
+}
+
+.footer .row {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px solid white;
+}
+
+.footer .row .column:first-child {
+  width: 35%;
+}
+
+.footer .row .column {
+  width: 21.6%;
+}
+
+.footer .desc {
+  margin-top: 18px;
+  /* max-width thì nó  co lại */
+  /* width: 267px; */
+  max-width: 267px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+  color: #ffffff;
+}
+
+.footer .socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.footer .title {
+  display: inline-block;
+  /* ko có bo góc border radius thì dùng border để vẽ ra dc, còn có thì phải xài before after */
+  border-bottom: 1px solid white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+  padding-bottom: 14px;
+  padding-right: 48px;
+  color: white;
+}
+
+.footer .list{
+    margin-top: 28px;
+}
+
+.footer .list a{
+    font-size: 1.4rem;
+    line-height: 1.86;
+    /* mặc ddingj thẻ a là inline nên ko xài margin dc */
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.footer .list .li:last-child{
+    margin-bottom: 0;
+}
+
+.footer .list strong{
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.86;
+}
+
+.footer .copyright{
+    padding: 28px 0;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: white;
 }
